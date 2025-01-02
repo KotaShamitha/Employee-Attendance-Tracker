@@ -4,11 +4,11 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ##Login credentials:
 HR Admin
-username: admin
+username: admin,
 password: admin
 
 Employee
-username: employee
+username: employee,
 password: employee
 
 ## Development server
