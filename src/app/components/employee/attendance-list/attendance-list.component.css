@@ -1,0 +1,118 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.no-records {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.attendance-table th {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.attendance-table td {
+  background-color: #f9f9f9;
+}
+
+.attendance-table tr:nth-child(even) td {
+  background-color: #ecf0f1;
+}
+
+.attendance-table td.present {
+  background-color: #27ae60;
+  color: white;
+}
+
+.attendance-table td.late {
+  background-color: #b39b9b;
+  color: rgb(224, 116, 116);
+}
+
+.attendance-table td.absent {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.request-adjustment {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn.request {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.request:hover {
+  background-color: #3498db;
+}
+
+@media (max-width: 768px) {
+  .attendance-table th,
+  .attendance-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .attendance-table {
+    font-size: 12px;
+  }
+
+  .btn.request {
+    width: 100%;
+  }
+
+  .request-adjustment {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .attendance-table th,
+  .attendance-table td {
+    font-size: 10px;
+    padding: 6px;
+  }
+}

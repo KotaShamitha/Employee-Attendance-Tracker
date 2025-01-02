@@ -1,0 +1,99 @@
+/* General Styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.no-adjustments {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Adjustment Card */
+.adjustment-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.adjustment-card:hover {
+  transform: translateY(-4px);
+}
+
+.adjustment-header h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.adjustment-header p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.adjustment-details p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Buttons */
+.adjustment-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn.approve {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn.approve:hover {
+  background-color: #2ecc71;
+}
+
+.btn.reject {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn.reject:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .adjustment-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

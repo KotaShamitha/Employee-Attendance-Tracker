@@ -1,0 +1,33 @@
+<div class="container">
+    <h1 class="title">Your Attendance Records</h1>
+
+    <div *ngIf="attendanceRecords.length === 0" class="no-records">
+        <p>No attendance records available.</p>
+    </div>
+
+    <table class="attendance-table" *ngIf="attendanceRecords.length > 0">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Check-In</th>
+                <th>Check-Out</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let record of attendanceRecords">
+                <td>{{ record.date }}</td>
+                <td>{{ record.checkIn }}</td>
+                <td>{{ record.checkOut }}</td>
+                <td
+                    [ngClass]="{ present: record.status === 'Present', late: record.status === 'Late', absent: record.status === 'Absent' }">
+                    {{ record.status }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="request-adjustment">
+        <button class="btn request" (click)="onRequestAdjustment()">Request Adjustment</button>
+    </div>
+</div>

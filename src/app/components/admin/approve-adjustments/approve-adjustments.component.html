@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="title">Approve Attendance Adjustments</h1>
+
+    <div *ngIf="adjustments.length === 0" class="no-adjustments">
+        <p>No pending adjustments at the moment.</p>
+    </div>
+
+    <div *ngFor="let adjustment of adjustments" class="adjustment-card">
+        <div class="adjustment-header">
+            <h3>{{ adjustment.employeeName }}</h3>
+            <p><strong>Date:</strong> {{ adjustment.date }}</p>
+        </div>
+
+        <div class="adjustment-details">
+            <p><strong>Original Check-In:</strong> {{ adjustment.originalCheckIn }}</p>
+            <p><strong>Original Check-Out:</strong> {{ adjustment.originalCheckOut }}</p>
+            <p><strong>Requested Change:</strong> {{ adjustment.requestedChange }}</p>
+            <p><strong>Reason:</strong> {{ adjustment.reason }}</p>
+        </div>
+
+        <div class="adjustment-actions">
+            <button class="btn approve" (click)="approvedAdjustment(adjustment.id)">Approve</button>
+            <button class="btn reject" (click)="rejectAdjustment(adjustment.id)">Reject</button>
+        </div>
+    </div>
+</div>
