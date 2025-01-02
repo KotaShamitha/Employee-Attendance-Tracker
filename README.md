@@ -1,7 +1,7 @@
 # EmployeeAttendanceTracker
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.0.
-
+Deployement link: [Employee Attendance Tracket](https://employee-attendance-tracker.vercel.app/login)
 Login credentials:
 HR Admin
 username: admin,
